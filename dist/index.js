@@ -1,2 +1,4 @@
-"use strict";
-console.log("test2");
+import User from "./header.js";
+const user = new User("Willem", 38);
+console.log("test3");
+console.log(user);
