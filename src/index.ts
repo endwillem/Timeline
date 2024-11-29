@@ -1,4 +1,4 @@
-import User from "./header.js";
+import User from "./user.js";
 
 const user = new User("Willem", 38);
 
