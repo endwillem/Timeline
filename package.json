@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --open",
-    "build": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js",
     "test": "tsc && npm run sass-dev",
     "sass-dev": "sass --watch --update --style=expanded scss:dist",
     "sass-build": "sass --style=expanded scss:dist"
