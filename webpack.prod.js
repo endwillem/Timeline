@@ -26,7 +26,7 @@ module.exports = {
   plugins: [
     //will automatically inject bundle js into ./dist/index.html
     new HTMLWebpackPlugin({
-      title: "Development",
+      title: "Production",
       template: "./public/index.html", //source
       filename: "./index.html", //destination
     }),
