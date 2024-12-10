@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --open",
-    "build": "webpack serve --config webpack.prod.js",
+    "build": "NODE_ENV=production webpack --config webpack.prod.js",
     "test": "tsc && npm run sass-dev",
     "sass-dev": "sass --watch --update --style=expanded scss:dist",
     "sass-build": "sass --style=expanded scss:dist"

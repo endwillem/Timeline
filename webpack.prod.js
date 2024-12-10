@@ -7,9 +7,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
   },
-  devServer: {
-    static: "./dist",
-  },
   module: {
     rules: [
       { test: /\.css$/, use: "css-loader" },
