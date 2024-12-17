@@ -3,15 +3,20 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.ts",
+  entry: "./index.ts",
+  context: path.resolve(__dirname, "src"),
   output: {
     path: path.resolve(__dirname, "dist"),
   },
+  devtool: "inline-source-map",
   devServer: {
     static: "./dist",
     port: 3000,
     open: true,
     hot: true,
+    devMiddleware: {
+      writeToDisk: true,
+    },
   },
   module: {
     rules: [
@@ -30,7 +35,7 @@ module.exports = {
     //will automatically inject bundle js into ./dist/index.html
     new HTMLWebpackPlugin({
       title: "Development",
-      template: "./public/index.html", //source
+      template: "./index.html", //source
       filename: "./index.html", //destination
     }),
   ],
