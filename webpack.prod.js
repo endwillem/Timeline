@@ -4,6 +4,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "production",
   entry: "./src/index.ts",
+  context: path.resolve(__dirname, "src"),
   output: {
     path: path.resolve(__dirname, "dist"),
   },
@@ -24,7 +25,7 @@ module.exports = {
     //will automatically inject bundle js into ./dist/index.html
     new HTMLWebpackPlugin({
       title: "Production",
-      template: "./public/index.html", //source
+      template: "./index.html", //source
       filename: "./index.html", //destination
     }),
   ],
