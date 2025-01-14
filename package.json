@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js --open",
+    "start": "webpack-dev-server --config webpack.dev.js",
     "build": "NODE_ENV=production webpack --config webpack.prod.js",
     "test": "tsc && npm run sass-dev",
     "sass-dev": "sass --watch --update --style=expanded scss:dist",
