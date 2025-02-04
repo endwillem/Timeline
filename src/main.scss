@@ -102,31 +102,27 @@ main {
       }
 
       /* date */
-      ul li .date {
+      ul li h1 {
         --dateH: 3rem;
         height: var(--dateH);
         margin-inline: calc(var(--inlineP) * -1);
-
         text-align: center;
-        background-color: var(--accent-color);
-
+        background-color: #41516c;
         color: white;
         font-size: 1.25rem;
         font-weight: 700;
-
         display: grid;
         place-content: center;
         position: relative;
-
         border-radius: calc(var(--dateH) / 2) 0 0 calc(var(--dateH) / 2);
       }
 
       /* date flap */
-      ul li .date::before {
+      ul li h1::before {
         content: "";
         width: var(--inlineP);
         aspect-ratio: 1;
-        background: var(--accent-color);
+        background: #41516c;
         background-image: linear-gradient(rgba(0, 0, 0, 0.2) 100%, transparent);
         position: absolute;
         top: 100%;
@@ -136,13 +132,12 @@ main {
       }
 
       /* circle */
-      ul li .date::after {
+      ul li h1::after {
         content: "";
         position: absolute;
         width: 2rem;
         aspect-ratio: 1;
-        background: var(--bgColor);
-        border: 0.3rem solid var(--accent-color);
+        border: 0.3rem solid #41516c;
         border-radius: 50%;
         top: 50%;
 
@@ -151,13 +146,12 @@ main {
       }
 
       /* title descr */
-      ul li .title,
-      ul li .descr {
-        background: var(--bgColor);
+      ul li h3,
+      ul li span {
         position: relative;
         padding-inline: 1.5rem;
       }
-      ul li .title {
+      ul li h3 {
         overflow: hidden;
         padding-block-start: 1.5rem;
         padding-block-end: 1rem;
@@ -169,8 +163,8 @@ main {
       }
 
       /* shadows */
-      ul li .title::before,
-      ul li .descr::before {
+      ul li h3::before,
+      ul li span::before {
         content: "";
         position: absolute;
         width: 90%;
@@ -181,11 +175,12 @@ main {
         filter: blur(4px);
         transform: translate(-50%, 50%);
       }
-      ul li .title::before {
+
+      ul li h3::before {
         bottom: calc(100% + 0.125rem);
       }
 
-      ul li .descr::before {
+      ul li span::before {
         z-index: -1;
         bottom: 0.25rem;
       }
@@ -209,16 +204,16 @@ main {
           grid-row: 2/4;
         }
 
-        ul li:nth-child(odd) .date::before {
+        ul li:nth-child(odd) h1::before {
           clip-path: polygon(0 0, 100% 0, 100% 100%);
           left: 0;
         }
 
-        ul li:nth-child(odd) .date::after {
+        ul li:nth-child(odd) h1::after {
           transform: translate(-50%, -50%);
           left: calc(100% + var(--col-gap) + var(--line-w) / 2);
         }
-        ul li:nth-child(odd) .date {
+        ul li:nth-child(odd) h1 {
           border-radius: 0 calc(var(--dateH) / 2) calc(var(--dateH) / 2) 0;
         }
       }
