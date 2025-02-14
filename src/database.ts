@@ -14,11 +14,9 @@ const firebaseConfig = {
   measurementId: "G-2CEHWVEXHD",
 };
 
-// module.exports = {
-//     getDocs: getDocs()
-// };
-
+//ToDo: ES6 (arrow) functie van maken
 function getData() {
+
   //init firebase app
   initializeApp(firebaseConfig);
 

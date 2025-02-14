@@ -6,3 +6,5 @@ import { getData } from "./database";
 // console.log(user);
 
 getData();
+
+//ToDo: dom manipulation function here
