@@ -10,85 +10,120 @@
     <base href="/" />
   </head>
   <body>
-    <header>
-      <div class="navigation">
-        <button>HOME</button>
-        <button>CONTACT</button>
+    <div id="login">
+      <div class="header">
+        <h1>Getting Started with Firebase Auth</h1>
       </div>
-      <div>
-        <button><i class="fa-solid fa-user"></i></button>
-      </div>
-    </header>
-    <main>
-      <div class="main-column">
-        <div class="timeline-container">
-          <h1>Timeline</h1>
-          <ul id="event-list">
-            <li>
-              <h1 class="date">2002</h1>
-              <h3 class="title">Title 1</h3>
-              <span class="descr">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas
-                itaque hic quibusdam fugiat est numquam harum, accusamus
-                suscipit consequatur laboriosam!
-              </span>
-            </li>
-            <li>
-              <h1 class="date">2007</h1>
-              <h3 class="title">Title 2</h3>
-              <span class="descr">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
-                adipisci nobis nostrum vero nihil veniam.
-              </span>
-            </li>
-            <li>
-              <h1 class="date">2012</h1>
-              <h3 class="title">Title 3</h3>
-              <span class="descr">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                minima consequuntur soluta placeat iure totam commodi
-                repellendus ea delectus, libero fugit quod reprehenderit, sequi
-                quo, et dolorum saepe nulla hic.
-              </span>
-            </li>
-            <li>
-              <h1 class="date">2017</h1>
-              <h3 class="title">Title 4</h3>
-              <span class="descr">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Impedit, cumque.
-              </span>
-            </li>
-            <li>
-              <h1 class="date">2022</h1>
-              <h3 class="title">Title 5</h3>
-              <span class="descr">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit,
-                non.
-              </span>
-            </li>
-          </ul>
+      <form>
+        <div class="group">
+          <input id="txtEmail" type="email" />
+          <label>Email</label>
         </div>
-        <div class="map-container">
-          <div class="slideshow">
-            <img src="./assets/hoofdkantoor-capgemini-5.jpg" />
+        <div class="group">
+          <input id="txtPassword" type="password" />
+          <label>Password</label>
+        </div>
+        <div id="divLoginError" class="group">
+          <div id="lblLoginErrorMessage" class="errorlabel">Error message</div>
+        </div>
+        <button id="btnLogin" type="button" class="button buttonBlue">
+          Log in
+        </button>
+        <button id="btnSignup" type="button" class="button buttonBlue">
+          Sign up
+        </button>
+      </form>
+    </div>
+
+    <div id="app">
+      <header>
+        <div class="navigation">
+          <button>HOME</button>
+          <button>CONTACT</button>
+        </div>
+        <div>
+          <button><i class="fa-solid fa-user"></i></button>
+        </div>
+      </header>
+      <main>
+        <div class="main-column">
+          <div class="timeline-container">
+            <h1>Timeline</h1>
+            <ul id="event-list">
+              <li>
+                <h1 class="date">2002</h1>
+                <h3 class="title">Title 1</h3>
+                <span class="descr">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas
+                  itaque hic quibusdam fugiat est numquam harum, accusamus
+                  suscipit consequatur laboriosam!
+                </span>
+              </li>
+              <li>
+                <h1 class="date">2007</h1>
+                <h3 class="title">Title 2</h3>
+                <span class="descr">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
+                  adipisci nobis nostrum vero nihil veniam.
+                </span>
+              </li>
+              <li>
+                <h1 class="date">2012</h1>
+                <h3 class="title">Title 3</h3>
+                <span class="descr">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
+                  minima consequuntur soluta placeat iure totam commodi
+                  repellendus ea delectus, libero fugit quod reprehenderit,
+                  sequi quo, et dolorum saepe nulla hic.
+                </span>
+              </li>
+              <li>
+                <h1 class="date">2017</h1>
+                <h3 class="title">Title 4</h3>
+                <span class="descr">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Impedit, cumque.
+                </span>
+              </li>
+              <li>
+                <h1 class="date">2022</h1>
+                <h3 class="title">Title 5</h3>
+                <span class="descr">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Odit, non.
+                </span>
+              </li>
+            </ul>
           </div>
-          <div class="location">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.6504206767727!2d5.0638310860067035!3d52.09940406957389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b5f18308109b%3A0x96b594dab39866b7!2sCapgemini%20Engineering!5e0!3m2!1sen!2snl!4v1736846770464!5m2!1sen!2snl"
-              width="100%"
-              height="100%"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+          <div class="map-container">
+            <div class="slideshow">
+              <img src="./assets/hoofdkantoor-capgemini-5.jpg" />
+            </div>
+            <div class="location">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2914.6504206767727!2d5.0638310860067035!3d52.09940406957389!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b5f18308109b%3A0x96b594dab39866b7!2sCapgemini%20Engineering!5e0!3m2!1sen!2snl!4v1736846770464!5m2!1sen!2snl"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
         </div>
-      </div>
-    </main>
-    <footer>
-      <span>© all right reservered</span>
-    </footer>
+      </main>
+      <footer>
+        <span>© all right reservered</span>
+        <form>
+          <div class="group">
+            <div id="lblAuthState" class="authlabel"></div>
+          </div>
+          <button id="btnLogout" type="button" class="button buttonBlue">
+            Log out
+          </button>
+        </form>
+      </footer>
+    </div>
   </body>
 </html>
