@@ -16,7 +16,6 @@ const firebaseConfig = {
 
 //ToDo: ES6 (arrow) functie van maken
 function getData() {
-
   //init firebase app
   initializeApp(firebaseConfig);
 
@@ -25,7 +24,7 @@ function getData() {
 
   //collection ref
   const colRef = collection(db, "events");
-
+  console.log(colRef);
   getDocs(colRef)
     .then((snapshot) => {
       let events: { id: string }[] = [];

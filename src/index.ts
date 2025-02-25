@@ -25,16 +25,18 @@ import {
   connectAuthEmulator,
 } from "firebase/auth";
 
-//import { getData } from "./database";
+// import { getData } from "./database";
 
 const firebaseApp = initializeApp({
-  apiKey: "dummy-apiKey",
-  authDomain: "dummy-authDomain.firebaseapp.com",
-  projectId: "dummy-project-id",
-  storageBucket: "dummy-authDomain.firebaseapp.com",
-  messagingSenderId: "123456789012",
-  appId: "1:123456789012:web:7c7abae699b868b7f896ec",
-  measurementId: "G-ABCDEFGHIJ",
+  apiKey: "AIzaSyDLOD6YRW-Qq3yIcTEmSl5smiKegl4-aB0",
+  authDomain: "timeline-cae8e.firebaseapp.com",
+  databaseURL:
+    "https://timeline-cae8e-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "timeline-cae8e",
+  storageBucket: "timeline-cae8e.firebasestorage.app",
+  messagingSenderId: "129647486779",
+  appId: "1:129647486779:web:7a2ea7752f4435fe6d791e",
+  measurementId: "G-2CEHWVEXHD",
 });
 
 // Login using email/password
@@ -60,12 +62,19 @@ const createAccount = async () => {
   const email = txtEmail.value;
   const password = txtPassword.value;
 
-  try {
-    await createUserWithEmailAndPassword(auth, email, password);
-  } catch (error) {
-    console.log(`There was an error: ${error}`);
-    showLoginError(error);
-  }
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed up
+      const user = userCredential.user;
+      console.log("success!!", user);
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+      // ..
+    });
 };
 
 // Monitor auth state
@@ -95,7 +104,9 @@ btnSignup.addEventListener("click", createAccount);
 btnLogout.addEventListener("click", logout);
 
 const auth = getAuth(firebaseApp);
-connectAuthEmulator(auth, "http://localhost:9099");
+console.log(auth);
+
+// connectAuthEmulator(auth, "http://localhost:9099");
 
 monitorAuthState();
 
