@@ -1,5 +1,5 @@
 import "./main.scss";
-import "./styles.css";
+import "./styles.scss";
 //import User from "./user";
 import { btnLogin, btnSignup, btnLogout } from "./ui";
 import {
@@ -9,7 +9,7 @@ import {
   logout,
 } from "./auth/auth";
 
-import { getAuth } from "firebase/auth";
+//import { getAuth } from "firebase/auth";
 
 import { getData } from "./database";
 
