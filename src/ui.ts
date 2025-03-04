@@ -10,12 +10,13 @@ export const txtPassword = document.getElementById(
 
 export const btnLogin = document.getElementById("btnLogin")!;
 export const btnSignup = document.getElementById("btnSignup")!;
-
 export const btnLogout = document.getElementById("btnLogout")!;
+export const btnUser = document.getElementById("btnUser")!;
 
 export const divAuthState = document.getElementById("divAuthState")!;
 export const lblAuthState = document.getElementById("lblAuthState")!;
 
+export const userForm = document.getElementById("userForm")!;
 export const divLoginError = document.getElementById("divLoginError")!;
 export const lblLoginErrorMessage = document.getElementById(
   "lblLoginErrorMessage"
@@ -24,6 +25,11 @@ export const lblLoginErrorMessage = document.getElementById(
 export const showLoginForm = () => {
   login.style.display = "block";
   app.style.display = "none";
+};
+
+export const showUser = () => {
+  userForm.style.display =
+    userForm.style.display !== "block" ? "block" : "none";
 };
 
 export const showApp = () => {

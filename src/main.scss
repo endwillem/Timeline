@@ -42,6 +42,12 @@ header {
     outline: inherit;
     margin: 15px;
   }
+
+  form {
+    display: none;
+    position: absolute;
+    right: 35px;
+  }
 }
 
 main {

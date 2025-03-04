@@ -11,9 +11,6 @@
   </head>
   <body>
     <div id="login">
-      <div class="login-header">
-        <h1>Getting Started with Firebase Auth</h1>
-      </div>
       <form>
         <div class="group">
           <input id="txtEmail" type="email" />
@@ -42,58 +39,24 @@
           <button>CONTACT</button>
         </div>
         <div>
-          <button><i class="fa-solid fa-user"></i></button>
+          <button id="btnUser" type="button">
+            <i class="fa-solid fa-user"></i>
+          </button>
+          <form id="userForm">
+            <div class="group">
+              <div id="lblAuthState" class="authlabel"></div>
+            </div>
+            <button id="btnLogout" type="button" class="button buttonBlue">
+              Log out
+            </button>
+          </form>
         </div>
       </header>
       <main>
         <div class="main-column">
           <div class="timeline-container">
             <h1>Timeline</h1>
-            <ul id="event-list">
-              <li>
-                <h1 class="date">2002</h1>
-                <h3 class="title">Title 1</h3>
-                <span class="descr">
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas
-                  itaque hic quibusdam fugiat est numquam harum, accusamus
-                  suscipit consequatur laboriosam!
-                </span>
-              </li>
-              <li>
-                <h1 class="date">2007</h1>
-                <h3 class="title">Title 2</h3>
-                <span class="descr">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
-                  adipisci nobis nostrum vero nihil veniam.
-                </span>
-              </li>
-              <li>
-                <h1 class="date">2012</h1>
-                <h3 class="title">Title 3</h3>
-                <span class="descr">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga
-                  minima consequuntur soluta placeat iure totam commodi
-                  repellendus ea delectus, libero fugit quod reprehenderit,
-                  sequi quo, et dolorum saepe nulla hic.
-                </span>
-              </li>
-              <li>
-                <h1 class="date">2017</h1>
-                <h3 class="title">Title 4</h3>
-                <span class="descr">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Impedit, cumque.
-                </span>
-              </li>
-              <li>
-                <h1 class="date">2022</h1>
-                <h3 class="title">Title 5</h3>
-                <span class="descr">
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Odit, non.
-                </span>
-              </li>
-            </ul>
+            <ul id="event-list"></ul>
           </div>
           <div class="map-container">
             <div class="slideshow">
@@ -115,14 +78,6 @@
       </main>
       <footer>
         <span>© all right reservered</span>
-        <form>
-          <div class="group">
-            <div id="lblAuthState" class="authlabel"></div>
-          </div>
-          <button id="btnLogout" type="button" class="button buttonBlue">
-            Log out
-          </button>
-        </form>
       </footer>
     </div>
   </body>
