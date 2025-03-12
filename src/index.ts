@@ -1,9 +1,17 @@
 import "./main.scss";
 import "./styles.scss";
 //import User from "./user";
-import { btnLogin, btnSignup, btnLogout, btnUser, showUser } from "./ui";
+import {
+  btnLogin,
+  btnSignupWithEmailLink,
+  btnSignup,
+  btnLogout,
+  btnUser,
+  showUser,
+} from "./ui";
 import {
   loginEmailPassword,
+  loginEmailLink,
   createAccount,
   monitorAuthState,
   logout,
@@ -14,6 +22,7 @@ import {
 import { getData } from "./database";
 
 btnLogin.addEventListener("click", loginEmailPassword);
+btnSignupWithEmailLink.addEventListener("click", loginEmailLink);
 btnSignup.addEventListener("click", createAccount);
 btnLogout.addEventListener("click", logout);
 btnUser.addEventListener("click", showUser);

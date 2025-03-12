@@ -9,6 +9,9 @@ export const txtPassword = document.getElementById(
 ) as HTMLInputElement;
 
 export const btnLogin = document.getElementById("btnLogin")!;
+export const btnSignupWithEmailLink = document.getElementById(
+  "btnSignupWithEmailLink"
+)!;
 export const btnSignup = document.getElementById("btnSignup")!;
 export const btnLogout = document.getElementById("btnLogout")!;
 export const btnUser = document.getElementById("btnUser")!;
