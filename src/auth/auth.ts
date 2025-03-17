@@ -41,7 +41,9 @@ const loginEmailPassword = async () => {
 
 const loginEmailLink = async () => {
   const email = txtEmail.value;
-
+  console.log(
+    window.location.href.substr(0, window.location.href.lastIndexOf("/"))
+  );
   const ActionCodeSettings = {
     // URL you want to redirect back to. The domain (www.example.com) for this
     // URL must be in the authorized domains list in the Firebase Console.
