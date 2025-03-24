@@ -1,33 +1,41 @@
 {
-  "name": "timeline",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "ngtimeline",
+  "version": "0.0.0",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.js",
-    "build": "NODE_ENV=production webpack --config webpack.prod.js",
-    "test": "tsc && npm run sass-dev",
-    "sass-dev": "sass --watch --update --style=expanded scss:dist",
-    "sass-build": "sass --style=expanded scss:dist"
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "^19.1.0",
+    "@angular/common": "^19.1.0",
+    "@angular/compiler": "^19.1.0",
+    "@angular/core": "^19.1.0",
+    "@angular/forms": "^19.1.0",
+    "@angular/platform-browser": "^19.1.0",
+    "@angular/platform-browser-dynamic": "^19.1.0",
+    "@angular/router": "^19.1.0",
+    "firebase": "^11.2.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.15.0"
+  },
   "devDependencies": {
-    "@types/node": "^22.10.0",
-    "css-loader": "^7.1.2",
-    "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.6.3",
+    "@angular-devkit/build-angular": "^19.1.6",
+    "@angular/cli": "^19.1.6",
+    "@angular/compiler-cli": "^19.1.0",
+    "@types/jasmine": "~5.1.0",
+    "jasmine-core": "~5.5.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
     "sass": "^1.82.0",
     "sass-loader": "^16.0.4",
-    "style-loader": "^4.0.0",
-    "ts-loader": "^9.5.1",
-    "typescript": "^5.7.2",
-    "webpack": "^5.97.1",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.1.0"
-  },
-  "dependencies": {
-    "firebase": "^11.2.0"
+    "typescript": "~5.7.2"
   }
 }
