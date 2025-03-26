@@ -1,6 +1,7 @@
-import "./main.scss";
-import "./styles.scss";
+import './main.scss';
+import './styles.scss';
 //import User from "./user";
+
 import {
   btnLogin,
   btnSignupWithEmailLink,
@@ -8,24 +9,25 @@ import {
   btnLogout,
   btnUser,
   showUser,
-} from "./ui";
+} from './ui';
+
 import {
   loginEmailPassword,
   loginEmailLink,
   createAccount,
   monitorAuthState,
   logout,
-} from "./auth/auth";
+} from './auth/auth';
 
 //import { getAuth } from "firebase/auth";
 
-import { getData } from "./database";
+import { getData } from './database';
 
-btnLogin.addEventListener("click", loginEmailPassword);
-btnSignupWithEmailLink.addEventListener("click", loginEmailLink);
-btnSignup.addEventListener("click", createAccount);
-btnLogout.addEventListener("click", logout);
-btnUser.addEventListener("click", showUser);
+btnLogin.addEventListener('click', loginEmailPassword);
+btnSignupWithEmailLink.addEventListener('click', loginEmailLink);
+btnSignup.addEventListener('click', createAccount);
+btnLogout.addEventListener('click', logout);
+btnUser.addEventListener('click', showUser);
 
 monitorAuthState();
 
