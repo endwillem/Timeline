@@ -13,32 +13,23 @@ import { getAuth } from 'firebase/auth';
 //   showUser,
 // } from '../ui';
 
-// elsewhere
-// import {
-//   loginEmailPassword,
-//   loginEmailLink,
-//   createAccount,
-//   monitorAuthState,
-//   logout,
-// } from '../auth/auth';
+import { monitorAuthState } from '../auth/auth';
 
-// elsewhere
-// import { getData } from '../database';
+// const firebaseConfig = {
+//   apiKey: 'AIzaSyDLOD6YRW-Qq3yIcTEmSl5smiKegl4-aB0',
+//   authDomain: 'timeline-cae8e.firebaseapp.com',
+//   databaseURL:
+//     'https://timeline-cae8e-default-rtdb.europe-west1.firebasedatabase.app',
+//   projectId: 'timeline-cae8e',
+//   storageBucket: 'timeline-cae8e.firebasestorage.app',
+//   messagingSenderId: '129647486779',
+//   appId: '1:129647486779:web:7a2ea7752f4435fe6d791e',
+//   measurementId: 'G-2CEHWVEXHD',
+// };
+// console.log('monitoring auth state');
 
-const firebaseConfig = {
-  apiKey: 'AIzaSyDLOD6YRW-Qq3yIcTEmSl5smiKegl4-aB0',
-  authDomain: 'timeline-cae8e.firebaseapp.com',
-  databaseURL:
-    'https://timeline-cae8e-default-rtdb.europe-west1.firebasedatabase.app',
-  projectId: 'timeline-cae8e',
-  storageBucket: 'timeline-cae8e.firebasestorage.app',
-  messagingSenderId: '129647486779',
-  appId: '1:129647486779:web:7a2ea7752f4435fe6d791e',
-  measurementId: 'G-2CEHWVEXHD',
-};
-
-const firebaseApp = initializeApp(firebaseConfig);
-const auth = getAuth(firebaseApp);
+// const firebaseApp = initializeApp(firebaseConfig);
+// const auth = getAuth(firebaseApp);
 
 @Component({
   selector: 'app-root',
@@ -47,18 +38,9 @@ const auth = getAuth(firebaseApp);
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
+  constructor() {
+    //monitorAuthState();
+  }
+
   title = 'ngtimeline';
 }
-
-// elsewhere
-// btnLogin.addEventListener('click', loginEmailPassword);
-// btnSignupWithEmailLink.addEventListener('click', loginEmailLink);
-// btnSignup.addEventListener('click', createAccount);
-// btnLogout.addEventListener('click', logout);
-// btnUser.addEventListener('click', showUser);
-
-// elsewhere?
-// monitorAuthState();
-
-// elsewhere?
-// getData();

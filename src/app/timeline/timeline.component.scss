@@ -164,31 +164,7 @@ main {
       }
     }
   }
-  .map-container {
-    margin: 0px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
 
-    .slideshow {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      img {
-        max-width: 100%;
-      }
-    }
-
-    div {
-      max-width: 600px;
-
-      iframe {
-        filter: invert(100%);
-      }
-    }
-  }
-  // iets met max-height hier
   .map-container {
     margin: 0px;
     display: flex;

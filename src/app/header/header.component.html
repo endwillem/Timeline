@@ -20,16 +20,28 @@
     </ul>
   </nav>
   <div>
-    <button id="btnUser" type="button">
+    <button id="btnUser" type="button" (click)="toggleProfileVisibility()">
       <i class="fa-solid fa-user"></i>
     </button>
-    <form id="userForm">
-      <div class="group">
-        <div id="lblAuthState" class="authlabel"></div>
-      </div>
-      <button id="btnLogout" type="button" class="button buttonBlue">
-        Log out
-      </button>
-    </form>
+    <div *ngIf="this.profileIsVisible && user">
+      <form id="userForm">
+        <div class="group">
+          <div id="lblAuthState" class="authlabel">
+            You're logged in as {{ user.displayName }} uid: {{ user.uid }},
+            email:
+            {{ user.email }}
+          </div>
+        </div>
+        <button
+          id="btnLogout"
+          type="button"
+          class="button buttonBlue"
+          (click)="logout()"
+        >
+          Log out
+        </button>
+      </form>
+    </div>
+    <div *ngIf="this.profileIsVisible && !user"><app-login></app-login></div>
   </div>
 </header>
